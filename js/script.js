@@ -1,9 +1,21 @@
+var playerChoice = "X";
+var turns = 0;
 
+function performLogic(input1, tile){
+    $(tile).html(playerChoice);
+    turns = turns + 1;
+    changeChoice();
 
+}
 
-
-
-
+function changeChoice(){
+    if (playerChoice ==="X"){
+        playerChoice ="O";
+    }
+    else if (playerChoice ==="O"){
+        playerChoice ="X";
+    }
+}
 
 $("#button1").click(function() {
     performLogic("#button1","#tile1");
